@@ -1,5 +1,10 @@
 {
-    "Prefix": "!",
-    "Token": "BOT_TOKEN",
-    "Options": {}
+    "Client":{
+        "Prefix": "!",
+        "Token": "BOT_TOKEN",
+        "Options": {}
+    },
+    "Database":{
+        "Connection": "MONGODB_CONNECTION_STRING"
+    }
 }

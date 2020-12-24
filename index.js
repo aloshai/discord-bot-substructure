@@ -5,7 +5,7 @@ const fs = require("fs");
 console.clear();
 console.log("Bot is starting...");
 
-const client = global.Client = new Client(Config.Options);
+const client = global.Client = new Client(Config.Client.Options);
 
 const Commands = global.Commands = new Array();
 console.log("Loading commands...");
@@ -55,5 +55,14 @@ dirNames.forEach(dirName => {
     });
 });
 
-console.log("Client file is running...");
-require("./src/client");
+console.log("Connecting to database...");
+const mongoose = require("mongoose");
+
+mongoose.connection.on("error", (err) => {
+    console.error("MongoDB Error", err);
+});
+mongoose.connection.on("connected", () => {
+    require("./src/client");
+});
+
+mongoose.connect(Config.Database.Connection, {useNewUrlParser: true, useUnifiedTopology: true});

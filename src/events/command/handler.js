@@ -5,7 +5,6 @@ const Config = require("../../../config/config.json");
 
 const regex = /("[^"\\]*(?:\\[\S\s][^"\\]*)*"|'[^'\\]*(?:\\[\S\s][^'\\]*)*'|\/[^\/\\]*(?:\\[\S\s][^\/\\]*)*\/[gimy]*(?=\s|$)|(?:\\\s|\S)+)/gmi;
 
-
 const Cooldown = new Map();
 setInterval(() => {
     Cooldown.forEach((cd, key) => {
@@ -24,10 +23,10 @@ class CommandHandler extends Event {
      * @param {Message} message 
      */
     async execute(message){
-        if(message.author.bot || !message.content.startsWith(Config.Prefix)) return;
+        if(message.author.bot || !message.content.startsWith(Config.Client.Prefix)) return;
 
         let args = message.content.match(regex);
-        let commandName = args[0] ? args[0].substr(Config.Prefix.length) : undefined;
+        let commandName = args[0] ? args[0].substr(Config.Client.Prefix.length) : undefined;
         if(!commandName) return;
     
         let command = global.Commands.find(c => c.Commands.includes(commandName.toLocaleLowerCase()));
