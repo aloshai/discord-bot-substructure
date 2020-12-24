@@ -6,7 +6,7 @@ First, make sure that `Node.js` is installed. If it is not installed, download i
 
 If you ready, now let's go step by steps:
 * Download this project and install it in any location on your computer.
-* Go inside the project and open the file `src/config/config.json` and adjust your settings. If you don't know how to set, check the [Bot Configuration](#-Bot-Configuration) section.
+* Go inside the project and open the file `config/config.json` and adjust your settings. If you don't know how to set, check the [Bot Configuration](#-Bot-Configuration) section.
 * Go to the project location and open a terminal.
   * If you cannot open it in the folder, open a normal terminal from your computer and type the command `cd path/to` in it.
 * Type the command `npm start`, `node .` or `node index.js` into the terminal.
