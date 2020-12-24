@@ -10,7 +10,7 @@ If you ready, now let's go step by steps:
 * Go to the project location and open a terminal.
   * If you cannot open it in the folder, open a normal terminal from your computer and type the command `cd path/to` in it.
 * Type the command `npm start`, `node .` or `node index.js` into the terminal.
-* Tada! Your bot is already 🎉
+* Tada! Your bot is ready 🎉
 
 # Bot Configuration
 You can see the properties you can set in the bot here.
