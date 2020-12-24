@@ -28,6 +28,8 @@ class CommandHandler extends Event {
         let args = message.content.match(regex);
         let commandName = args[0] ? args[0].substr(Config.Client.Prefix.length) : undefined;
         if(!commandName) return;
+
+        args = args.splice(1);
     
         let command = global.Commands.find(c => c.Commands.includes(commandName.toLocaleLowerCase()));
         if(!command) return;

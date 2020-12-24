@@ -5,5 +5,5 @@ const schema = new Schema({
     Settings: Object
 })
 
-const model = model("Guilds", schema);
-module.exports = model;
+const _model = model("Guilds", schema);
+module.exports = _model;
